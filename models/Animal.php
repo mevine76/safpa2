@@ -11,7 +11,7 @@ class Animal
         $dbh = Database::getInstancePDO();
 
         // Préparation de la requête d'insertion
-        $stmt = $dbh->prepare("INSERT INTO animal (date_of_birth, tatoo, chip, sex, name, weight, arrival_date, reserved, adoption_date, id_Specie, id_Color, id_Breed) VALUES (:date_of_birth, :tatoo, :chip, :sex, :name, :weight, :arrival_date, :reserved, :adoption_date, :id_Specie, :id_Color, :id_Breed)");
+        $stmt = $dbh->prepare("INSERT INTO animal (date_of_birth, tatoo, chip, sex, name, weight, arrival_date, reserved, adoption_date, id_Specie, id_Color, id_Breed, img, description) VALUES (:date_of_birth, :tatoo, :chip, :sex, :name, :weight, :arrival_date, :reserved, :adoption_date, :id_Specie, :id_Color, :id_Breed, :img, :description)");
 
         // Liaison des paramètres
         $stmt->bindParam(':date_of_birth', $data['date_of_birth']);

@@ -1,5 +1,8 @@
 body {
+    display: flex;
+    flex-direction: row;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
 }
 h2 {
     text-align: center;
@@ -11,4 +14,8 @@ form {
     background-color: #212529;
     border-radius: 10px;
     color: white;
+}
+
+.card {
+    background-color: lightgrey;
 }

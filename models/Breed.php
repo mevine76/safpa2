@@ -1,6 +1,6 @@
 <?php
 
-class Race
+class Breed
 {
     /**
      * Méthode pour ajouter une nouvelle race à la base de données

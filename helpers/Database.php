@@ -12,7 +12,7 @@ class Database
         $dsn = 'mysql:host=' . 'localhost' . ';dbname=' . 'refuge' . ';charset=utf8mb4';
 
         try {
-            // création d'une instannce de la classe PDO
+            // création d'une instance de la classe PDO
             $pdo = new PDO($dsn, 'root', '');
             if ($pdo) {
                 return $pdo;

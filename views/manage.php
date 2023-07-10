@@ -14,7 +14,7 @@ $dbh = new PDO('mysql:host=localhost;dbname=refuge', 'root', '');
 
 
 <a class="h1 text-center py-5 bg-dark text-white text-decoration-none" href="../index.php"></i> AFPA ANIMAL REFUGE </i></a>
-<h2 class="text-center my-3">Gérer les animaux</h2>
+<h2 class="text-center my-3">Gérer les pensionnaires</h2>
 
 <div class="row justify-content-center mx-0">
     <div class="col-lg-8 py-3 shadow border">
@@ -51,7 +51,7 @@ $dbh = new PDO('mysql:host=localhost;dbname=refuge', 'root', '');
             <td>
                 <a href="edit_animal.php?id=<?php echo $animal['id']; ?>">Modifier</a> 
                 <a href="delete_animal.php?id=<?php echo $animal['id']; ?>">Supprimer</a> 
-                <a href="view_animal.php?id=<?php echo $animal['id']; ?>">Voir</a>
+                <a href="view_animal.php?id=<?php echo $animal['id']; ?>">+ infos</a>
             </td>
         </tr>
         <?php endforeach; ?>
@@ -62,7 +62,7 @@ $dbh = new PDO('mysql:host=localhost;dbname=refuge', 'root', '');
 
 <div class="row flex-column align-items-center mx-0 py-2">
     <a class="btn btn-dark col-lg-2 col-8 my-2" href="../controllers/controller-accueil.php">Accueil</a>
-    <a class="btn btn-dark col-lg-2 col-8 my-2" href="../controllers/controller-add.php">Ajouter animal</a>
+    <a class="btn btn-dark col-lg-2 col-8 my-2" href="../controllers/controller-add.php">Ajouter un pensionnaire</a>
 </div>
 
 <?php include "templates/footer.php" ?>

@@ -6,7 +6,7 @@ h2 {
     text-align: center;
 }
 form {
-    max-width: 600px;
+    max-width: 31px;
     margin: 20px auto;
     padding: 30px;
     background-color: #212529;
@@ -14,10 +14,21 @@ form {
     color: white;
 }
 
+/* .containerd {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 60%;
+    height: 60%;
+    background-color: #212529;
+    color: white;
+    border-radius: 10px;
+} */
 
-
-.img {
+/* .img {
     width: 50%;
     height: 50%;
     object-fit: cover;
-}
+} */

@@ -31,8 +31,10 @@ class Animal
 
         // Exécution de la requête
         return $stmt->execute();
-        
     }
+
+
+
 
     /**
      * Méthode pour récupérer la liste des animaux de la base de données

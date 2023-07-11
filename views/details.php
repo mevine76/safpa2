@@ -6,13 +6,15 @@
 <?php
     foreach (Animal::getAll() as $animal) {
 
+    }
+?>
 
-    ?>
 
-<div class="card m-4 col-lg-3">
+<div class="containerd"></div>
+<div class="card mx-4 col-lg-5">
 
-        <a href="../views/details.php"><img src="" class="card-img-top" alt="image animaux"></a>
-        <div class="card-body">
+        
+        <div class="card h-25">
           <h5 class="card-title"><strong> Nom : </strong><?= $animal['name'] ?> </h5>
           <p class="card-text"><strong>ID : </strong><?= $animal['id'] ?> </p>
           <p class="card-text"><strong>Date naissance </strong><?= $animal['date_of_birth'] ?> </p>
@@ -26,9 +28,9 @@
           <p class="card-text"><strong>ID espèce : </strong><?= $animal['id_Specie'] ?> </p>
           <p class="card-text"><strong>ID Couleur : </strong><?= $animal['id_Color'] ?> </p>
           <p class="card-text"><strong>ID Race : </strong><?= $animal['id_Breed'] ?> </p>
-          <p class="card-text"><strong>Photo : </strong><?= $animal['img'] ?> </p>
+          <img class=img-fluid src="<?= $animal['img'] ?>" alt="Card image cap">
           <p class="card-text"><strong>Description : </strong><?= $animal['description'] ?> </p>
         </div>
       </div>
-<?php } ?>;
+
 <?php include "templates/footer.php" ?>

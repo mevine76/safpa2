@@ -41,16 +41,24 @@ class Animal
      */
     public static function getAll()
     {
+    }
+
+
+    public static function getAnimalId() 
+    {
+     
         // Récupération d'une instance de PDO
         $dbh = Database::getInstancePDO();
-
+        $id = $_GET['id']; 
         // Préparation de la requête de sélection
-        $stmt = $dbh->prepare("SELECT * FROM animal");
+        $stmt = $dbh->prepare("SELECT * FROM animal WHERE id = :id");
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+           
 
         // Exécution de la requête
         $stmt->execute();
 
         // Récupération des résultats
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);   
     }
 }

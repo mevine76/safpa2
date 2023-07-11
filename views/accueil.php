@@ -20,7 +20,7 @@
 
       <div class="card m-4 col-lg-3">
 
-        <a href="../controllers/controller-details.php"><img src="<?= $animal['img'] ?>" class="card-img-top" alt="image animaux"></a>
+        <a href="../controllers/controller-details.php?id=<?= $animal['id'] ?>"><img src="<?= $animal['img'] ?>" class="card-img-top" alt="image animaux"></a>
         <div class="card-body">
           <h4 class="card-title"> <?= $animal['name'] ?> </h4>
           <h5 class="card-title"> <?= $animal['id'] ?> </h5>

@@ -20,9 +20,10 @@
 
       <div class="card m-4 col-lg-3">
 
-        <a href="../views/details.php"><img src="https://images.pexels.com/photos/1828875/pexels-photo-1828875.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="image animaux"></a>
+        <a href="../views/details.php"><img src="<?= $animal['img'] ?>" class="card-img-top" alt="image animaux"></a>
         <div class="card-body">
-          <h5 class="card-title"> <?= $animal['name'] ?> </h5>
+          <h4 class="card-title"> <?= $animal['name'] ?> </h4>
+          <h5 class="card-title"> <?= $animal['id'] ?> </h5>
           <p class="card-text"> <?= $animal['description'] ?> </p>
         </div>
       </div>

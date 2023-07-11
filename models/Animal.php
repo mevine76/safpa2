@@ -26,6 +26,8 @@ class Animal
         $stmt->bindParam(':id_Specie', $data['id_Specie'], PDO::PARAM_INT);
         $stmt->bindParam(':id_Color', $data['id_Color'], PDO::PARAM_INT);
         $stmt->bindParam(':id_Breed', $data['id_Breed'], PDO::PARAM_INT);
+        $stmt->bindParam(':img', $data['img'], PDO::PARAM_INT);
+        $stmt->bindParam(':description', $data['description'], PDO::PARAM_INT);
 
         // Exécution de la requête
         return $stmt->execute();

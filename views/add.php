@@ -84,10 +84,10 @@ if (isset($_POST['submit'])) {
 
 <div class="row justify-content-center mx-0">
     <div class="col-lg-8 py-3 border shadow">
-
+        
         <!-- Formulaire d'ajout d'un animal -->
         <div class="container">
-            <h2 class="text-center my-3">Ajouter un animal</h2>
+            <h2 class="text-center my-3">Ajouter un pensionnaire</h2>
             <form method="post" class="form-inline">
                 <div class="form-group">
                     <label for="date_of_birth" class="mb-2">Date de naissance:</label>

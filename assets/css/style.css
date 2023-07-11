@@ -1,6 +1,4 @@
 body {
-    display: flex;
-    flex-direction: row;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     
 }
@@ -16,6 +14,10 @@ form {
     color: white;
 }
 
-.card {
-    background-color: lightgrey;
+
+
+.img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
 }

@@ -41,6 +41,17 @@ class Animal
      */
     public static function getAll()
     {
+     // Récupération d'une instance de PDO
+     $dbh = Database::getInstancePDO();
+
+     // Préparation de la requête de sélection
+     $stmt = $dbh->prepare("SELECT * FROM animal");
+
+     // Exécution de la requête
+     $stmt->execute();
+
+     // Récupération des résultats
+     return $stmt->fetchAll(PDO::FETCH_ASSOC);   
     }
 
 

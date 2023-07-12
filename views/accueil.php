@@ -15,21 +15,24 @@
     <?php
     foreach (Animal::getAll() as $animal) {
 
-       
+
     ?>
 
-      <div class="card m-4 col-lg-3">
-
-        <a href="../controllers/controller-details.php?id=<?= $animal['id'] ?>"><img src="<?= $animal['img'] ?>" class="card-img-top" alt="image animaux"></a>
-        <div class="card-body">
-          <h4 class="card-title"> <?= $animal['name'] ?> </h4>
-          <h5 class="card-title"> <?= $animal['id'] ?> </h5>
-          <p class="card-text"> <?= $animal['description'] ?> </p>
+      <div class="card me-3 mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <a href="../controllers/controller-details.php?id=<?= $animal['id'] ?>"><img src="<?= $animal['img'] ?>" class="img-fluid rounded-start" alt="image animaux"></a>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><strong> <?= $animal['name'] ?> </strong> </h5>
+              <p class="card-title"><strong> <?= $animal['id'] ?> </strong> </p>
+              <p class="card-text"> <?= $animal['description'] ?> </p>
+            </div>
+          </div>
         </div>
       </div>
-
-
-    <?php } ?>
+        <?php } ?>
   </div>
 </div>
 
@@ -38,4 +41,4 @@
 
 
 
-<?php include "templates/footer.php" ?>
+      <?php include "templates/footer.php" ?>

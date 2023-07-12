@@ -83,7 +83,7 @@ if (isset($_POST['submit'])) {
 <h2 class="text-center my-3"></h2>
 
 <div class="row justify-content-center mx-0">
-    <div class="col-lg-8 py-3 border shadow">
+    <div class="col-lg-8 py-3 border rounded shadow custom-color">
         
         <!-- Formulaire d'ajout d'un animal -->
         <div class="container">
@@ -183,6 +183,7 @@ if (isset($_POST['submit'])) {
                 
                 <div class="d-flex justify-content-center">
                     <input type="submit" name="submit" value="Ajouter" class="btn btn-secondary btn-lg">
+                    <a href="../controllers/controller-accueil.php" class="link-primary mt-2 ms-3 me-3">Annuler</a>
                 </div>
             </form>
 

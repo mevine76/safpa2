@@ -6,12 +6,17 @@ h2 {
     text-align: center;
 }
 form {
-    max-width: 31px;
+    max-width: 550px;
     margin: 20px auto;
     padding: 30px;
     background-color: #212529;
     border-radius: 10px;
     color: white;
+}
+
+.custom-color {
+    background-color: lightgrey;
+    
 }
 
 /* .containerd {

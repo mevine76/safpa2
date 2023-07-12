@@ -49,7 +49,7 @@ $dbh = new PDO('mysql:host=localhost;dbname=refuge', 'root', '');
                 echo $stmt->fetchColumn();
             ?></td>
             <td>
-                <a href="edit_animal.php?id=<?php echo $animal['id']; ?>">Modifier</a> 
+                <a href="../views/update.php?id=<?php echo $animal['id']; ?>">Modifier</a> 
                 <a href="delete_animal.php?id=<?php echo $animal['id']; ?>">Supprimer</a> 
                 <a href="view_animal.php?id=<?php echo $animal['id']; ?>">+ infos</a>
             </td>

@@ -63,6 +63,7 @@ if (isset($_POST['submit'])) {
             'id_Breed' => $id_Breed,
             'img' => $img,
             'description' => $description
+
         ];
         $result = Animal::create($newAnimal);
         if ($result) {
@@ -89,7 +90,7 @@ if (isset($_POST['submit'])) {
         
         <!-- Formulaire d'ajout d'un animal -->
         <div class="container">
-            <h2 class="text-center my-3">Ajouter un pensionnaire</h2>
+            <h2 class="text-center my-3">Mettre à jour un pensionnaire</h2>
             <form method="post" class="form-inline">
                 <div class="form-group">
                     <label for="date_of_birth" class="mb-2">Date de naissance:</label>
@@ -184,7 +185,7 @@ if (isset($_POST['submit'])) {
                 <br>
                 
                 <div class="d-flex justify-content-center">
-                    <input type="submit" name="submit" value="Ajouter" class="btn btn-secondary btn-lg">
+                    <input type="submit" name="submit" value="Mettre à jour" class="btn btn-secondary btn-lg">
                     <a href="../controllers/controller-accueil.php" class="link-primary mt-2 ms-3 me-3">Annuler</a>
                 </div>
             </form>
@@ -195,6 +196,7 @@ if (isset($_POST['submit'])) {
 
     <div class="row flex-column align-items-center mx-0 py-2">
         <a class="btn btn-dark col-lg-2 col-8 my-2" href="../controllers/controller-accueil.php">Accueil</a>
+        <a class="btn btn-dark col-lg-2 col-8 my-2" href="../controllers/controller-add.php">Ajouter un pensionnaire</a>
         <a class="btn btn-dark col-lg-2 col-8 my-2" href="../controllers/controller-manage.php">Gérér les pensionnaires</a>
     </div>
 

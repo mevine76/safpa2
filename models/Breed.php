@@ -19,6 +19,7 @@ class Breed
         // Exécution de la requête
         return $stmt->execute();
     }
+    
 
     /**
      * Méthode pour récupérer la liste des races de la base de données

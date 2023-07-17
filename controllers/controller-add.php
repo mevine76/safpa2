@@ -8,14 +8,24 @@ require_once "../helpers/Database.php";
 // j'appelle le model animal.php
 require_once "../models/Animal.php";
 
-//j'appelle le model breed.php
-require_once "../models/Breed.php";
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["submit"])) {
+    // Récupérer les données soumises dans le formulaire
+    $data = [
+        // ... Récupérez les valeurs soumises par le formulaire ici ...
+    ];
 
-//j'appelle le model color.php
-require_once "../models/Color.php";
+    // Ajouter l'animal à la base de données
+    if (Animal::create($data)) {
+        // Redirection vers la page d'accueil avec un message de succès
+        header("Location: accueil.php?message=Animal ajouté avec succès");
+        exit;
+    } else {
+        // En cas d'échec de l'ajout, afficher un message d'erreur
+        $message = "Erreur lors de l'ajout de l'animal";
+    }
+}
 
-//j'appelle le model species.php
-require_once "../models/Specie.php";
-
-// j'inclus la vue addAnimal.php
+// Afficher la page d'ajout d'un animal
 include "../views/add.php";
+
+

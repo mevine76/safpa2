@@ -18,10 +18,10 @@
 
     ?>
 
-      <div class="card me-3 mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <a href="../controllers/controller-details.php?id=<?= $animal['id'] ?>"><img src="<?= $animal['img'] ?>" class="img-fluid rounded-start" alt="image animaux"></a>
+      <div class="card me-3 mb-3 border-0" style="max-width: 540px;">
+        <div class="row no-gutters align-items-center">
+          <div class="col-md-4 card-img-col">
+            <a href="../controllers/controller-details.php?id=<?= $animal['id'] ?>"><img src="../assets/img/<?= $animal['img'] ?>" class="card-img-top img-fluid rounded" style="height: 264px;" alt="image animaux"></a>
           </div>
           <div class="col-md-8">
             <div class="card-body">

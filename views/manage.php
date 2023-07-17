@@ -49,9 +49,9 @@ $dbh = new PDO('mysql:host=localhost;dbname=refuge', 'root', '');
                 echo $stmt->fetchColumn();
             ?></td>
             <td>
-                <a href="../views/update.php?id=<?php echo $animal['id']; ?>">Modifier</a> 
-                <a href="delete_animal.php?id=<?php echo $animal['id']; ?>">Supprimer</a> 
-                <a href="view_animal.php?id=<?php echo $animal['id']; ?>">+ infos</a>
+                <a href="../controllers/controller-update.php?id=<?php echo $animal['id']; ?>">Modifier</a> 
+                <a href="../controllers/controller-delete.php?id=<?php echo $animal['id']; ?>">Supprimer</a> 
+                <a href="../controllers/controller-details.php?id=<?php echo $animal['id']; ?>">+ infos</a>
             </td>
         </tr>
         <?php endforeach; ?>

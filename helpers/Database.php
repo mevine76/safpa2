@@ -2,23 +2,24 @@
 
 class Database
 {
-    /**
-     * Méthode qui retourne une instance de la classe PDO
-     * @return object PDO
-     */
-    public static function getInstancePDO(): object
+    private static $instance;
+    private $dbh;
+
+    private function __construct()
     {
-
-        $dsn = 'mysql:host=' . HOST . ';dbname=' . DATABASE . ';charset=utf8mb4';
-
         try {
-            // création d'une instance de la classe PDO
-            $pdo = new PDO($dsn, USER_DATABASE, PASSWORD_DATABASE);
-            if ($pdo) {
-                return $pdo;
-            }
-        } catch (PDOException $exception) {
-            echo $exception->getMessage();
+            $this->dbh = new PDO("mysql:host=" . HOST . ";dbname=" . DATABASE, USER_DATABASE, PASSWORD_DATABASE);
+            $this->dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            die("Erreur de connexion à la base de données : " . $e->getMessage());
         }
+    }
+
+    public static function getInstancePDO()
+    {
+        if (self::$instance === null) {
+            self::$instance = new Database();
+        }
+        return self::$instance->dbh;
     }
 }

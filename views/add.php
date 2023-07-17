@@ -20,6 +20,9 @@ if (isset($_POST['submit'])) {
     $id_Specie = $_POST['id_Specie'];
     $id_Color = $_POST['id_Color'];
     $id_Breed = $_POST['id_Breed'];
+    $img = $_POST['img'];
+    $description = $_POST['description'];
+
     
     $errors = [];
     if (empty($date_of_birth)) {
@@ -180,8 +183,18 @@ if (isset($_POST['submit'])) {
                     </select>
                     <br>
                 </div>
-               
                 <br>
+                <div class="form-group">
+                    <label for="img" class="mb-2">Photo:</label>
+                    <input type="text" name="img" id="img" class="form-control">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="description" class="mb-2">Description:</label>
+                    <input type="text" name="description" id="description" class="form-control">
+                </div>
+               
+                
                 
                 <div class="d-flex justify-content-center">
                     <input type="submit" name="submit" value="Ajouter" class="btn btn-secondary btn-lg">

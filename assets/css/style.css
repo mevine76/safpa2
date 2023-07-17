@@ -37,3 +37,25 @@ form {
     height: 50%;
     object-fit: cover;
 } */
+
+
+/* .object-fit-cover {
+    object-fit: cover;
+  }
+   */
+
+.card-img-top {
+margin: 0;
+}
+
+
+/* Style personnalisé pour supprimer les marges internes de la card */
+.card.no-padding {
+padding: 0;
+}
+
+/* Style personnalisé pour supprimer les marges internes de la colonne */
+.card-img-col {
+padding-left: 0;
+padding-right: 0;
+}
